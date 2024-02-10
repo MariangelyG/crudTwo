@@ -7,6 +7,7 @@ import { EditUser } from "../pages/EditUser";
 import { useUsers } from "../hooks/useUsers";
 
 export const AppRouter = () => {
+  //Recibe como props todas las funciones del hook useUsers
   const {
     closeModal,
     handleAddUser,

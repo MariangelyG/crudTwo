@@ -25,27 +25,29 @@ export const useUsers = () => {
     //Función para agregar un nuevo usuario
     const handleAddUser = (user) => {
         const newUser = {
-            id: users.length+1,
+            id: users.length +1,
             ...user
         }
       setUsers([...users, newUser]);
     };
-  
+  //Función para eliminar el usuario seleccionado y cerrar el modal
     const handleDeleteUser = () => {
       setUsers(users.filter((item) => item.id !== userDelete));
       closeModal();
     };
   
+    //Función para que muestre la información del usuario seleccionado
     const handleView = (id) => {
       setUserById(users.find((item) => item.id === id));
     };
-  
+
+  //Función para ir a la ruta del usuario seleccionado
     const handleEdit = (user) => {
       navigate(`/editUser/${user.id}`);
       setEditUser(user);
      
     };
-  
+  //Función para editar el usuario seleccionado
     const handleEditUser = (user) =>{
      const result = users.map((item)=> item.id === editUser.id ? {...item, ...user } : item)
       setUsers(result)
@@ -55,7 +57,7 @@ export const useUsers = () => {
     useEffect(() => {
       getUsers();
     }, []);
-
+//Retorna todas las funciones y son recibidas en AppRouter
     return{
         users,
         open,
