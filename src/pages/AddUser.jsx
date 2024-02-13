@@ -1,6 +1,6 @@
 import { Form } from "../components/Form"
 
-
+//Page con el formulario para agregar un nuevo ususario
 
 export const AddUser = ({onSubmit}) => {
   return (

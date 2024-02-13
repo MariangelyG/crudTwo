@@ -2,6 +2,7 @@ import { Box, Button, Card, CardContent, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
+//Page que muestra un contenedor con la información del usuario seleccionado
 export const ViewUser = ({ userById }) => {
   const navigate = useNavigate();
 
